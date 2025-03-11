@@ -30,6 +30,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: mysql
+  namespace: expense
 spec:
   type: LoadBalancer
   selector: # labels are used as selectors
