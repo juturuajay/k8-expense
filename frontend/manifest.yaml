@@ -23,10 +23,10 @@ spec:
         project: expense
     spec:
       containers:
-      - name: nginx
-        image: ajayreddyj/frontend:1.1.0
-        ports:
-        - containerPort: 8080
+        - name: nginx
+          image: ajayreddyj/frontend:1.2.0
+          ports:
+            - containerPort: 8080
 ---
 kind: Service
 apiVersion: v1
@@ -40,6 +40,6 @@ spec:
     tier: web
     project: expense
   ports:
-  - protocol: TCP
-    port: 80 # service port
-    targetPort: 8080
+    - protocol: TCP
+      port: 80 # service port
+      targetPort: 8080
