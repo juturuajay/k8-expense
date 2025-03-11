@@ -19,12 +19,14 @@ spec:
     metadata:
       labels:
         app: frontend
-        tier: frontend
+        tier: web
         project: expense
     spec:
       containers:
       - name: nginx
         image: ajayreddyj/frontend:1.0.0
+        ports:
+        - containerPort: 8080
 ---
 kind: Service
 apiVersion: v1
